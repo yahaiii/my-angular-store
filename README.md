@@ -8,7 +8,7 @@ To get started with this project, follow these steps:
 
 1. Clone the repository to your local machine:
   ```
-   git clone https://github.com/yahaiii/my-store.git
+   git clone https://github.com/yahaiii/my-angular-store.git
    ```
 2.  Install the dependencies:
   ```
