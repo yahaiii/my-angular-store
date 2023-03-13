@@ -12,7 +12,7 @@ To get started with this project, follow these steps:
    ```
 2.  Install the dependencies:
   ```
-  cd e-commerce-app
+  cd my-angular-store
   npm install
   ```
 3.  Run the application:
