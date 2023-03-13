@@ -1,3 +1,10 @@
+/**
+
+This component represents the product list of the e-commerce application.
+It displays a list of products and allows the user to add them to the cart.
+
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { CartService } from '../../services/cart.service';
@@ -14,10 +21,11 @@ export class ProductListComponent implements OnInit {
   products: Product[] = [];
   quantity: number = 1;
 
-
+  // Inject services into constructor
   constructor(private productService: ProductService, private cartService: CartService) { }
 
   ngOnInit(): void {
+    // Retrieve products from ProductService
     this.productService.getProducts().subscribe(products => {
       this.products = products;
     });
@@ -25,17 +33,13 @@ export class ProductListComponent implements OnInit {
     console.log(this.products);
   }
 
+  // Method to add product to cart
+  addToCart(product: Product, qty: string): void {
+    const quantity = parseInt(qty);
+    // Call addToCart() method from CartService
+    this.cartService.addToCart(product, quantity);
 
-
-  // addToCart(item: Product): void {
-  //   this.products.push(item);
-  //   alert('Added to cart!');
-
-  //   console.log(this.products);
-
-  // }
-  addToCart(product: Product) {
-    this.cartService.addToCart(product);
+    alert(`${qty} ${product.name} added to the cart!`);
   }
 
 

@@ -8,8 +8,18 @@
             
             <h3 class="product-card-name">{{ product.name }}</h3>
             <p class="product-card-description">{{ product.description}}</p>
-            <p class="product-card-price">Price: {{ product.price }}</p>
-            <button (click)="addToCart(product)" class="add-to-cart">Add to cart</button>
+            <p class="product-card-price">Price:  $ {{ product.price }}</p>
+
+            <div>
+                <label for="qty" class="quantity-label">Quantity:</label>
+                <input type="number" min="1"  class="form-control  w-25 float-right mr-1 quantity-input" name="qty" #qty value="1">  
+                
+            </div>
+
+            <button (click)="addToCart(product, qty.value)" class="add-to-cart">Add to cart</button>
+            
+            
+            
 
         </div>
 

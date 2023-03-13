@@ -46,6 +46,30 @@
   font-weight: bold;
 }
 
+.quantity-input {
+  width: 50px;
+  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1px;
+  font-size: 14px;
+  margin: 15px;
+}
+
+.quantity-label {
+  /* font-weight: bold; */
+  margin-right: 10px;
+}
+
+.quantity-input {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  text-align: center;
+}
+
 button.add-to-cart {
   background-color: #007bff;
   color: #fff;
