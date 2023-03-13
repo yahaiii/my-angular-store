@@ -25,12 +25,25 @@ export class CartService {
 
   }
 
+  getTotalPrice(): number {
+    return this.cartItems.reduce((total,item) => total + (item.product.price * item.quantity), 0);
+  }
+
   getItems(): CartItem[] {
     return this.cartItems;
+  }
+
+  removeFromCart(item: CartItem) {
+    const index = this.cartItems.findIndex(cartItem => cartItem.product.id === item.product.id);
+
+    if (index !== 1) {
+      this.cartItems.splice(index, 1);
+    }
   }
 
   clearCart(): CartItem[] {
     this.cartItems = [];
     return this.cartItems;
   }
+
 }
