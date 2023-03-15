@@ -1,7 +1,6 @@
 /**
-
-This component represents the product list of the e-commerce application.
-It displays a list of products and allows the user to add them to the cart.
+* This component represents the product list of the e-commerce application.
+* It displays a list of products and allows the user to add them to the cart.
 
 */
 
@@ -17,6 +16,7 @@ import { Product } from '../../models/product.model';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
+
 export class ProductListComponent implements OnInit {
   products: Product[] = [];
   quantity: number = 1;

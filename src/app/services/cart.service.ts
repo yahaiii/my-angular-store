@@ -29,9 +29,15 @@ export class CartService {
     return this.cartItems.reduce((total,item) => total + (item.product.price * item.quantity), 0);
   }
 
+  getItemCount(): number {
+    return this.cartItems.length;
+  }
+
   getItems(): CartItem[] {
     return this.cartItems;
   }
+
+  
 
   removeFromCart(item: CartItem) {
     const index = this.cartItems.findIndex(cartItem => cartItem.product.id === item.product.id);
