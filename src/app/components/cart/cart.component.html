@@ -13,7 +13,7 @@
                     <p>{{ item.product.price }}</p>
                     <div class="form-group form-inline form-margin">
                         <label for="quantity-{{ item.product.id }}">Quantity:</label>
-                        <!-- <input type="number" name="" id="quantity-{{ item.product.id }}" class="form-control num-input ml-2" [(ngModel)]="item.product.quantity" min="1"> -->
+                        <input type="number" name="" id="quantity-{{ item.product.id }}" class="form-control num-input ml-2" [(ngModel)]="item.quantity" min="1">
                     </div>
                     <button class="btn btn-danger" (click)="removeFromCart(item)">Remove</button>
                 </div>
