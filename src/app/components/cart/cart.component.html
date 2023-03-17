@@ -1,3 +1,5 @@
+
+
 <div class="container cart-container">
     <div class="cart-panel">
         <h2>Your Cart</h2>
@@ -9,10 +11,10 @@
                 <div class="cart-item-details">
                     <h4>{{ item.product.description }}</h4>
                     <p>{{ item.product.price }}</p>
-                    <!-- <div class="form-group form-inline form-margin">
+                    <div class="form-group form-inline form-margin">
                         <label for="quantity-{{ item.product.id }}">Quantity:</label>
-                        <input type="number" name="" id="quantity-{{ item.product.id }}" class="form-control num-input ml-2" [(ngModel)]="item.product.quantity" min="1">
-                    </div> -->
+                        <!-- <input type="number" name="" id="quantity-{{ item.product.id }}" class="form-control num-input ml-2" [(ngModel)]="item.product.quantity" min="1"> -->
+                    </div>
                     <button class="btn btn-danger" (click)="removeFromCart(item)">Remove</button>
                 </div>
             </div>
@@ -20,7 +22,7 @@
 
         <ng-template #emptyCart>
             <div class="empty-cart-message">
-                <h4>Your cart is empty</h4>
+                <h4>Your cart is empty, please <a routerLink="/">add product</a> </h4>
             </div>
         </ng-template>
     </div>
