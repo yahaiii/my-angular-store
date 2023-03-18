@@ -19,7 +19,7 @@ export class CartComponent implements OnInit {
     this.totalPrice = this.cartService.getTotalPrice();
   }
 
-  removeFromCart(item: CartItem): void {
+  removeFromCart(item: CartItem) {
     this.cartService.removeFromCart(item);
   }
 
