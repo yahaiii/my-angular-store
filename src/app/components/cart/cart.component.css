@@ -27,9 +27,9 @@ img {
   }
   
   .cart-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    /* display: flex;
+    flex-direction: row; */
+    /* justify-content: center; */
     margin-top: 64px;
   }
   
@@ -42,4 +42,9 @@ img {
     display: flex;
     justify-content: center;
     margin-top: 64px;
+  }
+  
+  .no-margin {
+    margin: 0%;
+    justify-content: flex-start!important;
   }
