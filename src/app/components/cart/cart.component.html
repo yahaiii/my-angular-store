@@ -10,7 +10,7 @@
                 <img [src]="item.product.url" alt="{{ item.product.name }} image">
                 <div class="cart-item-details">
                     <h4>{{ item.product.description }}</h4>
-                    <p>{{ item.product.price }}</p>
+                    <p>Price: ${{ getItemTotal(item, item.quantity).toFixed(2) }}</p>
                     <div class="form-group form-inline form-margin">
                         <label for="quantity-{{ item.product.id }}">Quantity:</label>
                         <input type="number" name="" id="quantity-{{ item.product.id }}" class="form-control num-input ml-2" [(ngModel)]="item.quantity" min="1">
