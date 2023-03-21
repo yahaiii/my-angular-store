@@ -96,4 +96,8 @@ button.add-to-cart:hover {
   background-color: #0062cc;
 }
 
+.no-underline {
+  text-decoration: none;
+  color: #3a3a3a;
+}
 

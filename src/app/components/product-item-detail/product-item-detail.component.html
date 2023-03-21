@@ -1,1 +1,12 @@
-<p>product-item-detail works!</p>
+<div class="detail-container" *ngIf="product">
+    <div class="detail-item">
+      <img [src]="product.url" alt="{{ product.name }}" />
+    </div>
+    <div class="detail-item">
+      <h2>{{ product.name }}</h2>
+      <p><b>Product description:</b> {{ product.description }}</p>
+      <p><b>Price:</b> $ {{ product.price }}</p>
+      <a routerLink="/" class="back-link">Back to products</a>
+    </div>
+  </div>
+  
