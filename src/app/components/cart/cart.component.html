@@ -23,7 +23,7 @@
                     </div>
                 </div>
         
-                <div class="total-cost">Total Cost: $ {{ getCartTotal() }}</div>
+                <div class="total-cost">Total Cost: $ {{ getCartTotal().toFixed(2) }}</div>
         
                 <ng-template #emptyCart>
                     <div class="empty-cart-message">
