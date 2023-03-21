@@ -1,30 +1,3 @@
-// import { Component, OnInit } from '@angular/core';
-// import { ActivatedRoute } from '@angular/router';
-// import { ProductService } from '../../services/product.service';
-// import { Product } from '../../models/product.model';
-
-// @Component({
-//   selector: 'app-product-item-detail',
-//   templateUrl: './product-item-detail.component.html',
-//   styleUrls: ['./product-item-detail.component.css']
-// })
-// export class ProductItemDetailComponent implements OnInit {
-//   product!: Product;
-
-//   constructor(
-//     private route: ActivatedRoute,
-//     private productService: ProductService
-//   ) { }
-
-//   ngOnInit() {
-//     const id = Number(this.route.snapshot.paramMap.get('id'));
-//     this.productService.getProductById(id).subscribe(product => {
-//       this.product = product;
-//     });
-//   }
-// }
-
-
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../services/product.service';

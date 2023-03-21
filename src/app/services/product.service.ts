@@ -18,11 +18,6 @@ export class ProductService {
     return this.http.get<Product[]>(this.dataUrl);
   }
 
-  // getProductById(id: number): Observable<Product> {
-  //   const url = `${this.dataUrl}/${id}`;
-  //   return this.http.get<Product>(url);
-  // }
-
   getProductById(id: string): Observable<Product> {
     return this.getProducts().pipe(
       map(products => products.find(p => p.id === +id)!)

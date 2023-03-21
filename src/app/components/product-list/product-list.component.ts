@@ -37,7 +37,6 @@ export class ProductListComponent implements OnInit {
   // Method to add product to cart
   addToCart(product: Product, qty: string): void {
     const quantity = parseInt(qty);
-    // Call addToCart() method from CartService
     this.cartService.addToCart(product, quantity);
 
     Swal.fire({
@@ -47,7 +46,6 @@ export class ProductListComponent implements OnInit {
       confirmButtonText: 'OK'
     });
 
-    // alert(`${qty} ${product.name} added to the cart!`);
   }
 
 
