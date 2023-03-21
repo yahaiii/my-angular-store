@@ -27,4 +27,8 @@ export class CartComponent implements OnInit {
     return (item.product.price * quantity); 
   }
 
+  getCartTotal(): number {
+    return this.cartService.getTotalPrice();
+  }
+
 }
