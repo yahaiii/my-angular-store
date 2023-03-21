@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { CartService } from '../../services/cart.service';
 import { Product } from '../../models/product.model';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -39,7 +40,14 @@ export class ProductListComponent implements OnInit {
     // Call addToCart() method from CartService
     this.cartService.addToCart(product, quantity);
 
-    alert(`${qty} ${product.name} added to the cart!`);
+    Swal.fire({
+      icon: 'success',
+      title: 'Added!',
+      text: `${qty} ${product.name} added to the cart!`,
+      confirmButtonText: 'OK'
+    });
+
+    // alert(`${qty} ${product.name} added to the cart!`);
   }
 
 

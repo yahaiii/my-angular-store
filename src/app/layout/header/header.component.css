@@ -30,3 +30,8 @@ a {
   padding: 2px 6px;
   border-radius: 50%;
 }
+
+.pull-right {
+  float: right;
+}
+

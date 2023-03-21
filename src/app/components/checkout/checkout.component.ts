@@ -51,8 +51,8 @@ export class CheckoutComponent implements OnInit {
 
     Swal.fire({
       icon: 'success',
-      title: 'Order completed!',
-      text: 'Thank you for your purchase.',
+      title: 'Order successfully completed!',
+      text: 'Thank you for your patronage.',
       confirmButtonText: 'OK'
     });
 
