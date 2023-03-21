@@ -10,7 +10,11 @@
             <a class="nav-link" routerLink="/">Home</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" routerLink="/cart">Cart [ {{ cartCount }} ]</a>
+            <a routerLink="/cart" class="nav-link">
+              <i class="fa fa-shopping-cart"></i>
+              Cart
+              <!-- <span class="cart-count">{{ cartCount }}</span> -->
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/checkout">Checkout</a>

@@ -7,7 +7,7 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  cartCount: number = 0;
+  cartCount!: number;
 
   constructor(private cartService: CartService) { }
 

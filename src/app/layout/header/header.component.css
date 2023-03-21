@@ -1,4 +1,4 @@
-.header {
+/* .header {
   text-align: center;
   background: #33B5E5;
   color: #8b8b8b;
@@ -7,4 +7,26 @@
 
 a {
   color: #b84b4b;
+} */
+
+/* Style for the cart nav link */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: #f0603c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Style for the span displaying the number of items in the cart */
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  background-color: #f00;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
 }
