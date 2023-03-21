@@ -40,7 +40,8 @@ This project was built with:
 - TypeScript
 - HTML
 - CSS
-- ng-bootstrap
+- Bootstrap
+- SweetAlert2
 
 ## License
 
