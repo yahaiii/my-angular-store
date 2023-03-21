@@ -42,6 +42,6 @@ export class CheckoutComponent implements OnInit {
     alert('Your order has been completed!');
 
     this.cartService.clearCart();
-    this.router.navigate(['/products']);
+    this.router.navigate(['/']);
   }
 }
