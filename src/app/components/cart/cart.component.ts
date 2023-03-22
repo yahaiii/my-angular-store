@@ -26,7 +26,7 @@ export class CartComponent implements OnInit {
     Swal.fire({
       icon: 'warning',
       title: 'Item removed!',
-      text: `You have successfully an item from the cart`,
+      text: `Item successfully removed from cart`,
       confirmButtonText: 'OK'
     });
 
