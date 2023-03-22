@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -13,6 +13,8 @@ import Swal from 'sweetalert2';
 })
 export class CheckoutComponent implements OnInit {
   checkoutForm!: FormGroup;
+
+  @Output() checkoutComplete = new EventEmitter<void>();
 
   constructor(
     private formBuilder: FormBuilder,
@@ -34,6 +36,7 @@ export class CheckoutComponent implements OnInit {
     });
   }
 
+  
   onSubmit() {
 
     if (this.cartService.getItems().length === 0) {
@@ -49,15 +52,11 @@ export class CheckoutComponent implements OnInit {
 
     // alert('Your order has been completed!');
 
-    Swal.fire({
-      icon: 'success',
-      title: 'Order successfully completed!',
-      text: 'Thank you for your patronage.',
-      confirmButtonText: 'OK'
-    });
+    
 
     this.cartService.clearCart();
     this.router.navigate(['/']);
+    this.checkoutComplete.emit();
   }
 }
 

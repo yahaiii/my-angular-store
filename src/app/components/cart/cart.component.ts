@@ -26,7 +26,7 @@ export class CartComponent implements OnInit {
     Swal.fire({
       icon: 'warning',
       title: 'Item removed!',
-      text: `You have successfully it from the cart`,
+      text: `You have successfully an item from the cart`,
       confirmButtonText: 'OK'
     });
 
@@ -38,6 +38,15 @@ export class CartComponent implements OnInit {
 
   getCartTotal(): number {
     return this.cartService.getTotalPrice();
+  }
+
+  handleCheckoutComplete() {
+    Swal.fire({
+      icon: 'success',
+      title: 'Order successfully completed!',
+      text: 'Thank you for your patronage.',
+      confirmButtonText: 'OK'
+    });
   }
 
 }
